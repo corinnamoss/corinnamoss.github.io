@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.star{
+				width: 100px;
+				height: 100px; 
+				background-image: url(whatever.png);
+				background-size:contain;
+				background-repeat: no-repeat;
+				display: inline-block;
+				background-color: blue;
+		}
+
+		.star: hover{
+				background-color: black;
+
+		}
+</style> 
+</head>
+<h3> stars in the sky: <div id="score"> </div></h3>
+<body>
+<script type="text/javascript">
+
+	// var number = 0 
+
+	function makeStar() {var star = document.createElement("div");
+	document.body.appendChild(star); 
+	star.classList.add("star");
+	// number = number + 1 
+	// score.innerText = number;
+	}
+	
+	setInterval(makeStar, 500)
+
+</script>
+</body>
+</html>
