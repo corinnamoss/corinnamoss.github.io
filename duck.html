@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		#box{
+
+		width: 200px; 
+		height: 200px;
+		background-color:transparent;
+		background-image:url(duck.png);
+		background-size:cover; 
+		background-position: center; 
+		position: absolute;
+
+
+		}
+		
+
+
+
+
+
+	</style>
+
+		
+
+
+</head>
+<body>
+
+<div id="box"></div>
+<script type= "text/javascript"> 
+
+	document.addEventListener("mousemove",
+		function(event){
+			// console.log(event.ClintX, even.clientY)
+			box.style.left= event.clientX + "px"
+			box.style.top= event.clientY +"px"
+			
+			
+		})
+	</script>
+
+
+</body>
+</html>
