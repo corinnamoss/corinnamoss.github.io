@@ -7,10 +7,11 @@
 
 	<style type="text/css"> 
 		#box{ 
-			width: 400px;
+			width: 700px;
 			height:  500px;
 			border: 1px solid black;
 			background-size: cover;
+			background-position: center;
 
 		 }
 
@@ -19,22 +20,20 @@
 <body>
 
 	<center> 
-		<p> thank you so much<p> 
-	<div id =box></div>
+		<p> wishlsit ideas<p> 
+	<div id=box></div>
 
 	</center>
 	
 
 	<script type="text/javascript"> 
-		var reasons = ["hi", "hello", "hola", "bonjour"];
+		var gifts = ["url(sneakers.jpg)", "url(ring.jpg)", "url(uggs.jpg)", "url(camera.jpg)", "url(shirt.jpg)", "url(pants.jpg)"];
 
 box.addEventListener("click", function(){
 
-var randomNumber = document.getElementByID("randomNumber");randomNumber.addEventListener("click", function()
+var number = Math.round(Math.random()*5);
 
-//Math.round(Math.random()*5);
-
-box.style.backgroundImage = "url(https://mountainhighoutfitters.com/media/catalog/product/cache/c619222d5bd5215c3e56642e4ad54913/rdi/rdi/ugg-womens-coquette-slippers-5125_1.jpg)" + reasons[randomNumber] + ")"; 
+box.style.backgroundImage = gifts[number]; 
 })
 //console.log(randomNumber)
 
