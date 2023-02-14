@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+<style type="text/css">	
+
+	#box{
+			width: 200px;
+			height:  200px;
+			border: 1px solid black;
+			background-size: cover;
+			background-position: center;
+		}
+
+			#box2{
+			width: 200px;
+			height:  200px;
+			border: 1px solid blue;
+			background-size: cover;
+			background-position: center;
+		}
+
+
+
+
+
+
+</style>		
+			
+</head>
+
+<body>
+<div id =box> </div>
+	<div id =box2> </div>
+
+<script type="text/javascript">
+	var spanishList = ["ir imperfect", "todos los dias, ella, amar", "nunca, yo, balair"]
+
+
+box.addEventListener("click", 
+	function(){
+	var number = Math.round(Math.random()*2);
+	box.innerText = spanishList[number]
+
+	box2.addEventListener("click", function(){
+	box2.innerText = englishList[number]
+
+
+})//event listener for box2//
+
+}) //event listener for box//
+		var englishList = ["iba, ibas, iba, ibamos, ibais, iban", "amaba, amabas, amaba, amabamos, amabais, amaban", "bailaba, bailabas, bailaba, bailabamos, bailabais bailaban"]
+
+
+
+
+</script>
+
+</body>
+</html>
