@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		#buggy{ /*refering to buggy in order to style the div*/
+			width:100px;
+			height:100px;
+			background-color: blueviolet;
+			/*background-image: 1960-jeep-cj.jpg;*/
+			background-image: ;
+			/*background-image: url("carcar.jpg");
+			background-repeat: no-repeat;*/
+	/*		background-size: contain;*/
+			left:10px;
+			position: absolute;
+		
+		}
+	</style>
+</head>
+<body>
+
+	<div id="buggy">
+		<!-- <img scr = "1960-jeep-cj.jpg"> -->
+			</div> <!-- creating a div and giving it id of buggy -->
+
+	<script type="text/javascript">
+		
+		buggy.style.left = "0px"; 
+		buggy.style.top = "0px";   
+
+		// at the beggining the div starts left as 0px 
+
+		 var x = parseInt(buggy.style.left);
+		 var y = 100;
+
+		  // if x which is x plus 10 the div moves to the left 10 more px 
+
+		document.addEventListener("keydown", function(event){console.log(x)
+
+					
+			if (event.keyCode == 39){
+			x = x+10;
+			buggy.style.left = x +"px";
+			
+		}
+			if (event.keyCode == 37){
+			x = x-10;
+			buggy.style.left = x +"px";
+		}
+
+			if (event.keyCode == 38){
+			y = y - 10; 
+			buggy.style.width = y + "px";
+			buggy.style.height = y + "px"
+		}
+
+			if (event.keyCode == 40)
+			y = y + 10;
+			buggy.style.width = y + "px";
+			buggy.style.height = y + "px"
+		})
+	
+
+
+	</script>
+
+</body>
+</html>

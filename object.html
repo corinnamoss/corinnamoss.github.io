@@ -1,0 +1,223 @@
+<html><head>
+	<title>rock paper scissors</title>
+	<style>
+
+		#mytitle{
+			height:40px;
+			width:300px;
+			background-color:lightblue;
+			top:40px;
+			position:relative;
+			display:inline-block;
+			border:5px solid lightblue;
+			font-size:30px;
+		}
+
+		#computertitle{
+			height:40px;
+			width:300px;
+			background-color:lightseagreen;
+			display:inline-block;
+			top:40px;
+			position:relative;
+			border:5px solid lightseagreen;
+			font-size:30px;
+
+		}
+
+		#titlespacer{
+			width:20px;
+			height:40px;
+			display:inline-block;
+			position:relative;
+			top:40px;
+		}
+
+		#myrock{
+			height:150px;
+			width:150px;
+			background-image: "rock.png";
+			background-repeat:no-repeat;
+			background-size:contain;
+			top:150px;
+			display:inline-block;
+			position:relative;
+		}
+
+		#mypaper{
+			height:150px;
+			width:150px;
+			background-image: "paper.png";
+			background-repeat:no-repeat;
+			background-size:contain;
+			display:inline-block;
+			position:relative;
+			top:150px;
+		}
+
+		#block{
+			height:200px;
+			width:200px;
+			background-size:contain;
+			background-repeat:no-repeat;
+			position:absolute;
+			left:50px;
+			top:50px;
+			background-position:center;
+			
+		}
+
+		#block2{
+			height:200px;
+			width:200px;
+			background-size:contain;
+			background-repeat:no-repeat;
+			position:absolute;
+			left:50px;
+			top:50px;
+			background-position:center;
+			
+		}
+
+		#myscissors{
+			height:150px;
+			width:150px;
+			background-image: "scissors.png";
+			background-size:contain;
+			background-repeat:no-repeat;
+			display:inline-block;
+			position:relative;
+			top:150px;
+		}
+
+		#myroll{
+			height:300px;
+			width:300px;
+			background-color:rgb(246, 244, 240);
+			display:inline-block;
+			top:50px;
+			position:relative;
+			border:5px solid lightseagreen;
+		}
+
+		#computerroll{
+			height:300px;
+			width:300px;
+			background-color: rgb(246, 244, 240);
+			display:inline-block;
+			top:50px;
+			position:relative;
+			border: 5px solid lightblue;
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+		#spacer{
+			width:20px;
+			height:300px;
+			display:inline-block;
+			position:relative;
+			top:150px;
+		}
+
+
+
+		body{
+			background-color: rgb(246, 244, 240);
+		}
+
+	</style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1100.0" data-gr-ext-installed="">
+
+	
+
+	<center><div id="myroll">
+		<div id="block" style="background-image: url(&quot;rock.png&quot;);"></div>
+
+</div>
+	<div id="spacer"></div>
+	<div id="computerroll"><div id="block2" style="background-image: url(&quot;paper.png&quot;);"></div>
+
+	</div></center>
+
+	<center><div id="mytitle">your score: 2</div>
+	<div id="titlespacer"></div>
+	<div id="computertitle">computer score: 10</div></center>
+
+	<center><div id="myrock"></div>
+	<div id="mypaper"></div>
+	<div id="myscissors"></div></center>
+
+	<script type="text/javascript">
+
+		var roll = ["rock.png", "scissors.png", "paper.png"]
+		var myscore = 0
+		var computerscore = 0
+
+		myscissors.addEventListener("click", function(){
+			block.style.backgroundImage = "url(scissors.png)";
+			var math = Math.round(Math.random()*2);
+			block2.style.backgroundImage = "url(" + roll[math] + ")";
+
+			if (math == 2){
+				console.log("paper");
+				mytitle.innerText="your score: " + (myscore+1);
+				console.log(myscore);
+			 	myscore=myscore+1;
+			 	}
+
+			 if (math == 0){
+			 	console.log("rock");
+			 	computertitle.innerText="computer score: " + (computerscore + 1);
+			 	computerscore=computerscore+1;
+			 }
+
+		})
+
+		myrock.addEventListener("click", function(){
+			block.style.backgroundImage = "url(rock.png)";
+			var math = Math.round(Math.random()*2);
+			block2.style.backgroundImage = "url(" + roll[math] + ")";
+
+			if (math == 2){
+				console.log("paper");
+				computertitle.innerText="computer score: " + (computerscore+1);
+				console.log(computerscore);
+			 	computerscore=computerscore+1;
+			 	}
+
+			 if (math == 1){
+			 	console.log("scissors");
+			 	mytitle.innerText="your score: " + (myscore + 1);
+			 	myscore=myscore+1;
+			 }
+		})
+
+		mypaper.addEventListener("click", function(){
+			block.style.backgroundImage = "url(paper.png)";
+			var math = Math.round(Math.random()*2);
+			block2.style.backgroundImage = "url(" + roll[math] + ")";
+
+			if (math == 1){
+				console.log("scissors");
+				computertitle.innerText="computer score: " + (computerscore+1);
+				console.log(computerscore);
+			 	computerscore=computerscore+1;
+			 	}
+
+			 if (math == 0){
+			 	console.log("rock");
+			 	mytitle.innerText="your score: " + (myscore + 1);
+			 	myscore=myscore+1;
+			 }
+		})
+
+
+
+
+	</script>
+
+
+<div id="forest-ext-shadow-host"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
