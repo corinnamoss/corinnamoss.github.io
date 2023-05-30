@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+		<h1>happy birthday mom! click for photos of us</h1>
+	<title></title>
+	<style type="text/css">
+		#div{
+
+		width: 500px; 
+		height: 500px;
+		background-image: url("");
+		background-size:cover; 
+		background-position: center; 
+		position: absolute;
+		}
+		#dad{
+		width: 500px
+		height:  500px;
+		background-image: url("");
+		background-size: cover;
+		background-position: right;
+		position: absolute;
+
+
+
+		}
+		
+
+	</style>
+			
+
+</head>
+<body>
+
+<div id= "div"></div>
+<div id="dad"></div> 
+
+<script type="text/javascript">
+		var counter = 0;
+		
+		document.addEventListener("click",
+		function(event){
+			counter= counter+1;
+			// console.log(event.ClintX, even.clientY)
+			// div.style.left= event.clientX + "px"
+			// div.style.top= event.clientY +"px"
+		if (counter ==1)
+			{div.style.backgroundImage = "url(momphoto1.jpeg)"}
+		
+		if (counter ==2)
+			{div.style.backgroundImage = "url(IMG_1257.PNG)"}
+	
+
+		if (counter ==3)
+		{div.style.backgroundImage = "url(IMG_A6485D460D01-1.jpeg)"}
+
+		if (counter ==4)
+			{div.style.backgroundImage = "url(IMG_1085.PNG)"}
+			// counter = 0;
+
+		if (counter ==5)
+			{div.style.backgroundImage = "url(IMG_1504.jpeg)"}
+
+		})
+</script>
+
+</body>
+</html>
