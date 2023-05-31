@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>dear mom, 
+	happy valentines day! i love you!</title>
+	<style type="text/css">
+		.corinna{
+			width: 300px;
+			height: 300px;
+		
+			background-image: url(mom1.jpg);
+			background-size: cover;
+			transitition: 2s;
+			opacity: 1;
+			transition: 2s;
+			display: inline-block;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+.text{
+	position: absolute;
+}
+	#letter{
+		font-family: playfair-display;
+		color: hotpink;
+		font-size: x-large;
+	}
+</style>
+
+	</style>
+</head>
+<body>
+
+</body>
+<center><div id="letter">
+	happy valentines day mom! i love you to the moon and back!💝🌚
+</div>
+
+</center>
+<script type="text/javascript">
+
+	var phrases = ["thank you for always making me feel better💝", "thank you for caring about me always🥰", "thank you for making me feel less stressed💖", "thank you for being my bestfriend💞",]
+
+
+	function makeDivs (x){
+		//this creates the divs the picture will show up on//
+		var corinna = document.createElement("div");
+		document.body.appendChild(corinna);		
+		corinna.classList.add('corinna');
+
+		//adsfsdf//
+		corinna.id = "corinna"+ x
+
+		var text = document.createElement("div");
+		corinna.appendChild(text);	
+		text.classList.add('text');
+		text.id = "text"+x;
+text.style.backgroundColor = "hotpink"
+text.style.color = "white"
+
+corinna.addEventListener("mouseenter", function(){
+	
+	corinna.style.backgroundColor ="white";
+	corinna.style.transition = "2s"
+	corinna.style.backgroundImage="url(mom" +x+".png)";
+
+	function whatever (){
+		text.innerText = phrases[x];
+		} 
+	setTimeout(whatever, 750) 
+
+})
+
+// 	corinna.addEventListener("mouseleave", function(){
+// 		function text2 (){
+
+// 	corinna.innerText = "";} 
+// ""
+// 	corinna.style.backgroundImage= "url(mom1.jpg)";
+// 	corinna.style.transition = "2s"
+// 		setTimeout(text2, 750)
+// })
+
+
+} //end of whole function//
+
+for (var i=0; i<4; i=i+1){makeDivs(i)}
+
+
+</script>
+
+</html>
